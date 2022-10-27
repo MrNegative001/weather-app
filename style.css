@@ -1,0 +1,168 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: #222;
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  font-size: 120%;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+
+  position: relative;
+}
+::placeholder {
+  color: white;
+}
+.card {
+  background-image: linear-gradient(to right bottom, #473bf094, #6359e838);
+  color: white;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  padding: 1rem;
+  height: 100vh;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background-image: linear-gradient(to right bottom, #6259e8, #473bf0);
+  color: white;
+  cursor: pointer;
+  transition:all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.403);
+}
+
+button:hover {
+  background-image: linear-gradient(#6259e8, #1100ff);
+  transform: scale(1.2);
+  margin-left: 12px;
+}
+
+.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c54;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(95% - 100px);
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 1s;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.403);
+}
+
+.search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.509);
+  color: #6259e8;
+  width: 100%;
+}
+
+.temp {
+  margin: -2rem 1rem;
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  padding-top: 5rem;
+  font-style: italic;
+  font-size: 3rem;
+}
+
+.city {
+  font-size: 6rem;
+
+  font-family: Caveat;
+  font-weight: 100;
+  padding-left: 2rem;
+  align-self: flex-start;
+}
+.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+  top: 20%;
+  left: 35%;
+  transform: translateX(-50%), translateY(-50%);
+}
+
+.loading::before {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  font-size: 4rem;
+}
+
+.loading::after {
+  visibility: visible;
+  content: " Make sure you have an internet connection";
+  color: white;
+  position: absolute;
+  font-size: 1rem;
+  top: 5rem;
+  left: 10px;
+}
+
+.humidity {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-left: 1em;
+}
+
+.wind {
+  font-size: 1.5rem;
+  padding-left: 1em;
+
+  font-weight: 800;
+}
+
+.bottom {
+  height: 20%;
+  width: 100%;
+  background-color: #6359e8bf;
+  position: absolute;
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+  bottom: 0;
+}
+
+.icon {
+  margin-left: 1em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  height: 100%;
+}
